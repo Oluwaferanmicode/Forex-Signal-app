@@ -1,86 +1,22 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Forex Signal Dashboard</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-
-    .signal-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .pair {
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #34495e;
-    }
-
-    .trend, .support, .resistance, .signal, .breakout {
-      margin: 10px 0;
-    }
-
-    .signal.BUY {
-      color: green;
-      font-weight: bold;
-    }
-
-    .signal.SELL {
-      color: red;
-      font-weight: bold;
-    }
-
-    .signal.HOLD {
-      color: gray;
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 600px) {
-      .card {
-        padding: 15px;
-      }
-    }
-  </style>
+    <title>Forex Signal App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-  <h1>Forex Trade Signals</h1>
-  <div class="signal-container">
-    {% for pair, signal in signals.items() %}
-      <div class="card">
-        <div class="pair">{{ pair }}</div>
-        <div class="trend"><strong>Trend:</strong> {{ signal.trend }}</div>
-        <div class="support"><strong>Support:</strong> {{ signal.support }}</div>
-        <div class="resistance"><strong>Resistance:</strong> {{ signal.resistance }}</div>
-        <div class="breakout"><strong>Breakout:</strong> {{ signal.breakout }}</div>
-        <div class="signal {{ signal.signal }}"><strong>Signal:</strong> {{ signal.signal }}</div>
-      </div>
-    {% endfor %}
-  </div>
+    <h1>Welcome to the Forex Signal Web App</h1>
+    <p>Your app is up and running!</p>
 </body>
-  </html>
+</html>
