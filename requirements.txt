@@ -1,3 +1,4 @@
 flask
 requests
-twelve-data
+pandas
+numpy
